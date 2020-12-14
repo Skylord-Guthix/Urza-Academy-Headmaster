@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 console.log("heyo");
 const PREFIX = '!';
-const token = "";
+const token = process.env.BOT_TOKEN;
 
 const PLUSONES = [
     "Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.",
