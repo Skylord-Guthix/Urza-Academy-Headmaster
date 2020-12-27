@@ -22,7 +22,7 @@ const PLUSONES = [
     "Until end of turn, Urza becomes a legendary 4/4 red Dragon creature with flying, indestructible, and haste. (He doesn't lose loyalty while he's not a planeswalker.)",
     "Until your next turn, creatures you control get +1/+0 and gain lifelink.",
     "Look at the top five cards of your library. You may reveal an artifact card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
-    "Urza deals 3 damage to target creature or player.",
+    "Urza deals 3 damage to any target.",
     "Until your next turn, whenever a creature deals combat damage to Urza, destroy that creature.",
     "Add X mana in any combination of colors to your mana pool, where X is the number of creatures you control.",
 ];
@@ -30,7 +30,7 @@ const PLUSONES = [
 const MINUSONES = [
     "Urza deals 3 damage to each creature.",
     "Gain control of target creature.",
-    "Urza deals 4 damage to target creature or player and you gain 4 life.",
+    "Urza deals 4 damage to any target and you gain 4 life.",
     "Destroy target creature. You gain life equal to its toughness.",
     "You get an emblem with “Creatures you control get +1/+1.”",
     "You may put a creature card from your hand onto the battlefield.",
