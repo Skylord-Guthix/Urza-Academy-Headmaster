@@ -122,6 +122,7 @@ client.on('message', msg => {
         }
         case "edhget":{
             msg.reply("Urza sighs. \"*Feeling extra lucky today are we? Well here you go.*\"");
+            edhget(msg);
             return;
         }
         default:{
