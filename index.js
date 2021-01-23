@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const fs = require("fs");
 const client = new Discord.Client();
 console.log("heyo");
 const PREFIX = '!';
@@ -81,14 +82,26 @@ client.on('message', msg => {
     if (msg.content[0] !== PREFIX){
         return;
     }
-    
+
     let args = msg.content.substring(PREFIX.length).split(' ');
     console.log(args);
-    if (args[0] != "urza"){
-        return;
+    switch (args[0]){
+        case "urza" :{
+            urza(msg, args);
+            break;
+        }
+        case "edhget":{
+            edhget(msg);
+            break;
+        }
+        default:{
+            return;
+        }
     }
+ });
 
-    // we are calling Urza!
+ function urza(msg, args){
+     // we are calling Urza!
     let size = 0;
 
     switch(args[1]){
@@ -107,6 +120,10 @@ client.on('message', msg => {
             size = MINUSSIXES.length;
             break;
         }
+        case "edhget":{
+            msg.reply("Urza sighs. \"*Feeling extra lucky today are we? Well here you go.*\"");
+            return;
+        }
         default:{
             msg.reply("Urza furrows his brow. \"*I am not sure of what you ask, friend,*\" he says. Try using +1, -1 or -6 instead.");
             return;
@@ -118,7 +135,28 @@ client.on('message', msg => {
     if ( pick === size ) pick--;
     console.log(pick);
     console.log(array);
-    msg.reply(array[pick]);
- });
+    if(array[pick]) msg.reply(array[pick]);
+ }
+
+ function edhget(msg){
+    fs.readFile("decklinks", 'utf-8', function(error, data){
+        if (error){
+            msg.reply("I had an error opening the links file and it was "+error.message+"\nI feel bad and useless :(");
+        }
+        else{
+            //data is a string we need to split up
+            let links = data.split('\n');
+            let length = links.length;
+            let pick = Math.floor((Math.random() * length));
+            if ( pick === length ) pick--;
+            if (links[pick]){
+                msg.reply("try playing "+links[pick]);
+            }
+            else{
+                msg.reply("Oepsie doepsie.");
+            }
+        }
+    });
+ }
 
 client.login(token);
