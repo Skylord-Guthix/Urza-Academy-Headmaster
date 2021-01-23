@@ -78,6 +78,10 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+    if (msg.content[0] !== PREFIX){
+        return;
+    }
+    
     let args = msg.content.substring(PREFIX.length).split(' ');
     console.log(args);
     if (args[0] != "urza"){
