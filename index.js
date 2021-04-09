@@ -57,7 +57,7 @@ const MINUSSIXES = [
     "Destroy all lands target player controls.",
     "Create X 2/2 white Cat creature tokens, where X is your life total.",
     "You gain 100 life.",
-    "Urza deals 10 damage to target player and each creature they controls.",
+    "Urza deals 10 damage to target player and each creature they control.",
     "You get an emblem with “Creatures you control have double strike, trample, hexproof, and haste.”",
     "You get an emblem with “Artifacts, creatures, enchantments, and lands you control have indestructible.”",
     "Create a 6/6 green Wurm creature token for each land you control.",
@@ -72,6 +72,18 @@ const MINUSSIXES = [
     "You gain X life and draw X cards, where X is the number of lands you control.",
     "Flip five coins. Take an extra turn after this one for each coin that comes up heads.",
     "You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield.",
+];
+
+const MINUSTWELVES = [
+    "Each opponent sacrifices one of their family members.",
+    "Gain permanent ownership of target possession owned by target player.",
+    "You get an emblem with "Whenever an opponent concedes, that player can no longer play *Magic* for as long as they live.",
+    "You control all players during all future *Magic* games.",
+    "You get an emblem with "You cannot lose the game and your opponents cannot win the game.",
+    "All players play a *Dominion* subgame. Regardless of the outcome, when the game finishes, draw a card, gain 3 life, then you may put a land card from your hand onto the battlefield.",
+    "Create four Doubling Season tokens. Exile all non-enchantment permanents you control, then return them to the battlefield.",
+    "You get an emblem with "Planeswalker abilities may be used as if you had not used a planeswalker ability this turn.",
+    "You get an emblem with "You may cast spells without paying their mana costs.",
 ];
 
 client.on('ready', () => {
@@ -118,6 +130,11 @@ client.on('message', msg => {
         case "-6":{
             var array = MINUSSIXES;
             size = MINUSSIXES.length;
+            break;
+        }
+        case "-12":{
+            var array = MINUSTWELVES;
+            size = MINUSTWELVES.length;
             break;
         }
         case "edhget":{
