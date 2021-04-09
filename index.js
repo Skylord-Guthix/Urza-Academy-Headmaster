@@ -77,13 +77,13 @@ const MINUSSIXES = [
 const MINUSTWELVES = [
     "Each opponent sacrifices one of their family members.",
     "Gain permanent ownership of target possession owned by target player.",
-    "You get an emblem with "Whenever an opponent concedes, that player can no longer play *Magic* for as long as they live.",
+    "You get an emblem with \"Whenever an opponent concedes, that player can no longer play *Magic* for as long as they live.\"",
     "You control all players during all future *Magic* games.",
-    "You get an emblem with "You cannot lose the game and your opponents cannot win the game.",
+    "You get an emblem with \"You cannot lose the game and your opponents cannot win the game.\"",
     "All players play a *Dominion* subgame. Regardless of the outcome, when the game finishes, draw a card, gain 3 life, then you may put a land card from your hand onto the battlefield.",
     "Create four Doubling Season tokens. Exile all non-enchantment permanents you control, then return them to the battlefield.",
-    "You get an emblem with "Planeswalker abilities may be used as if you had not used a planeswalker ability this turn.",
-    "You get an emblem with "You may cast spells without paying their mana costs.",
+    "You get an emblem with \"Planeswalker abilities may be used as if you had not used a planeswalker ability this turn.\"",
+    "You get an emblem with \"You may cast spells without paying their mana costs.\"",
 ];
 
 client.on('ready', () => {
